@@ -129,6 +129,24 @@
             </div>
 
             <div class="card">
+                <h2>Supported Devices &amp; How Data Is Used</h2>
+                <p>Cyclical connects to standard Bluetooth Low Energy (BLE) cycling accessories. All sensor data is processed on-device in real time and stored locally in your ride recordings.</p>
+                <ul>
+                    <li><strong>Heart Rate Monitors</strong> (BLE Heart Rate Service 0x180D) &mdash; Live heart rate is displayed on your dashboard, used to calculate heart rate training zones, and saved with your ride recording. If Apple Health is enabled, heart rate data is also written to HealthKit workouts.</li>
+                    <li><strong>Power Meters</strong> (BLE Cycling Power Service 0x1818) &mdash; Instantaneous power (watts) is displayed in real time, used for training load and intensity calculations, and included in ride recordings and Strava uploads.</li>
+                    <li><strong>Speed &amp; Cadence Sensors</strong> (BLE Cycling Speed and Cadence Service 0x1816) &mdash; Wheel speed and pedalling cadence are displayed on your dashboard and recorded with your ride for post-ride analysis.</li>
+                    <li><strong>Rear Radar</strong> (Garmin Varia-compatible radar units) &mdash; Approaching vehicle alerts are shown in real time during your ride to improve situational awareness. Radar data is not stored.</li>
+                    <li><strong>Battery Monitoring</strong> (BLE Battery Service 0x180F) &mdash; Battery levels of all connected sensors are read and displayed so you know when a device needs charging. Battery data is not stored.</li>
+                </ul>
+                <p style="margin-top: 12px;">Cyclical also integrates with:</p>
+                <ul>
+                    <li><strong>Apple Watch</strong> &mdash; Live heart rate is read via HealthKit workout sessions when no external heart rate monitor is connected.</li>
+                    <li><strong>Apple Health</strong> &mdash; Completed workouts (distance, duration, calories, heart rate) are saved to Apple Health with your permission.</li>
+                    <li><strong>GPX Route Import</strong> &mdash; You can import route files from any GPX-compatible app or service for turn-by-turn navigation. Routes are stored locally on your device.</li>
+                </ul>
+            </div>
+
+            <div class="card">
                 <h2>Data We Send</h2>
                 <ul>
                     <li><strong>Elevation API:</strong> Route coordinates are sent to the <a href="https://www.opentopodata.org" style="color:#0066cc;">OpenTopoData</a> API (open-source, self-hostable) to fetch elevation profiles. Only latitude/longitude pairs are transmitted &mdash; no personal identifiers.</li>
